@@ -1,0 +1,557 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500;700&display=swap')
+
+@font-face
+	font-family: 'Druk Wide'
+	src: url('../fonts/Druk Wide Bold.ttf')
+	font-weight: bold
+
+$color-warning: #FEDD2F
+
+.black 
+	color: #000000 !important
+
+.violet
+	color: #BE00FF !important
+
+.red
+	color: #FF0000 !important
+
+.gray
+	color: #959595 !important
+
+.turquoise
+	color: #50E5EF !important
+		
+.blue
+	color: #0047FF !important
+		
+.orange
+	color: #FFA800 !important
+
+.blue2
+	color: #151EEA !important
+
+.blue3
+	color: #1584EA !important
+
+.green
+	color: #15EA51 !important
+
+$transition: .3s
+
+body 
+	font-family: 'Roboto Mono', sans-serif
+	color: #000000
+	font-size: 14px
+	text-transform: uppercase
+	&:before 
+		content: ''
+		position: fixed
+		top: 0
+		right: 0
+		bottom: 0
+		left: 0
+		transition: $transition
+		background-color: $color-warning
+		background-image: url(../img/brand.png)
+		background-repeat: no-repeat
+		background-position: center center
+		background-size: 400px
+		z-index: 9999
+		@media (max-width: 575.98px)
+			background-size: 300px
+
+.pace-container
+	overflow: hidden
+	opacity: 0
+	visibility: hidden
+	transition: $transition
+.pace-done 
+	&:before 
+		opacity: 0
+		visibility: hidden
+	.pace-container
+		opacity: 1
+		visibility: visible
+
+.pace
+	pointer-events: none
+	user-select: none
+	&-inactive
+		display: none
+	&-progress
+		position: fixed
+		top: 0
+		right: 100%
+		width: 100%
+		border-top: 3px solid #fff
+		z-index: 99999
+
+* 
+	outline: none !important
+
+img 
+	max-width: 100%
+	height: auto
+
+a 
+	text-decoration: none !important
+	transition: $transition
+
+.drukwide
+	font-family: 'Druk Wide', sans-serif
+
+.row-1
+	margin-left: -4px
+	margin-right: -4px
+	[class*='col']
+		padding-left: 4px
+		padding-right: 4px
+
+.navbar 
+	transition: $transition
+	background: $color-warning
+	border: 1px solid #000000
+	padding: 0
+	align-items: initial
+	.navbar-brand
+		padding: 0
+		align-self: normal
+		display: flex
+		align-items: center
+		img
+			transition: $transition
+			@media (max-width: 1199.98px)
+				width: 160px			
+	@media (min-width: 1200px)
+		&.sticky	
+			.navbar-brand
+				img
+					width: 240px
+
+.nav-section
+	padding: 6px 16px 
+	a 
+		text-transform: uppercase 
+		display: inline-block
+		padding: 2px
+		color: #000000
+		&:hover
+			opacity: .6
+		&.active 
+			font-weight: bold
+
+.sandwich
+	color: inherit
+	display: block
+	cursor: pointer
+	padding: 0
+	border: 0
+	background: transparent
+	transition: $transition
+	padding-right: 10px
+	@media (min-width: 992px)
+		display: none
+	&:before, &:after
+		content: ''
+	span, &:after
+		margin-top: 4px
+	span, &:before, &:after
+		width: 20px
+		display: block
+		transition: $transition
+		transform-origin: left center
+		border-top: 2px solid
+	&:not(.collapsed)
+		&:before
+			transform: translateX(3px) translateY(-1px) rotate(45deg)
+		span
+			width: 0
+			opacity: 0
+		&:after
+			transform: translateX(3px) translateY(1px) rotate(-45deg)
+	&:hover 
+		opacity: .8
+
+.container 
+	@media (min-width: 1200px)
+		max-width: 1115px
+
+.pt170
+	padding-top: 170px
+	@media (max-width: 991.98px)
+		padding-top: 100px
+
+.h1, h1 
+	font-size: 48px
+	@media (max-width: 575.98px)
+		font-size: 34px
+
+.h2, h2 
+	font-size: 36px
+	font-family: 'Druk Wide', sans-serif
+	font-weight: bold
+
+.fz-12
+	font-size: 12px
+.fz-13
+	font-size: 13px
+.fz-14
+	font-size: 14px
+.fz-18
+	font-size: 18px
+.fz-20
+	font-size: 20px
+.fz-36
+	font-size: 36px
+
+.fw500	
+	font-weight: 500
+.fw300
+	font-weight: 300
+.ttn
+	text-transform: none !important
+
+.op06
+	&:hover 
+		opacity: .6
+
+.links
+	a
+		&:hover
+			opacity: .6
+		&.active 
+			text-decoration: underline !important
+
+.links-2
+	padding-left: 70px
+	.arrow-box
+		position: relative
+		.arrow2
+			position: absolute
+			top: 50%
+			transform: translateY(-50%)
+			left: -44px
+			opacity: 0
+			transition: $transition
+		a
+			color: #000
+			font-weight: 300
+			&:hover
+				opacity: .6
+			&.active
+				font-weight: bold
+			&:hover, &.active
+				~.arrow2
+					opacity: 1
+
+.form-search
+	position: relative
+	max-width: 216px
+	opacity: 0
+	visibility: hidden
+	transition: $transition
+	margin-top: 2px
+	&.active 
+		opacity: 1
+		visibility: visible
+	.form-control
+		padding: 0
+		height: 15px
+		padding-right: 20px
+		background: #FFF
+		border: 0
+		border-bottom: 1px solid #000000
+		border-radius: 0
+		font-size: 13px
+		color: #9A9A9A
+		text-transform: uppercase
+		font-weight: bold
+		&:focus 
+			box-shadow: none
+	.btn
+		transition: $transition
+		position: absolute
+		background: none
+		border: none
+		top: 50%
+		transform: translateY(-50%)
+		right: 0
+		padding: 0
+		font-size: 11px
+		color: #000000
+		font-weight: 300
+		&:focus 
+			box-shadow: none
+
+.form-search-2
+	max-width: 250px
+	transition: $transition
+	.form-control
+		display: inline-block
+		padding: 8px 0
+		height: 15px
+		border: 0
+		border-bottom: 1px solid #000000
+		border-radius: 0
+		font-size: 14px
+		color: #9A9A9A
+		background: $color-warning
+		&:focus 
+			box-shadow: none
+
+.w-300
+	@media (min-width: 1200px)
+		width: 300px
+
+.border-shadow
+	border: 1px solid #000000
+	box-shadow: 4px 4px 2px rgba(0, 0, 0, 0.15)
+
+.set-block
+	font-family: 'Druk Wide', sans-serif
+	font-size: 18px
+	background: #FEDD2F
+	text-align: center
+	font-weight: 500
+	padding: 32px 16px	
+	border-bottom: 1px solid #000000	
+.set-block2
+	font-size: 13px
+	font-weight: 300
+	padding: 16px
+	border-bottom: 1px solid #000000	
+.set-block3
+	font-size: 13px
+	font-weight: 300
+	padding: 16px
+	padding-bottom: 24px
+	border-bottom: 1px solid #000000		
+.set-block4
+	font-size: 14px
+	border-bottom: 0
+
+.play
+	position: absolute
+	top: 50%
+	left: 50%
+	transform: translate(-50%, -50%)
+	transition: $transition
+	&:hover
+		opacity: .6
+
+.bg-img
+	background-size: cover
+	background-position: center center
+	height: 205px
+	border-bottom: 1px solid #000000
+
+.bg-img2
+	height: 100%
+	@media (max-width: 767.98px)
+		height: 288px
+
+.bg-ads
+	background-size: cover
+	background-position: center center
+	height: 175px
+	width: 100%
+
+.cart
+	color: #000
+	display: block
+	margin-bottom: 40px
+	border: 1px solid #000000
+	box-shadow: 4px 4px 2px rgba(0, 0, 0, 0.15)
+	.block
+		padding: 26px 80px 38px 20px
+		line-height: 15px
+		position: relative
+		@media (max-width: 575.98px)
+			padding: 20px 20px 36px
+		.arrow
+			position: absolute
+			transition: $transition
+			right: 18px
+			bottom: 12px
+	&:hover
+		color: #000
+		box-shadow: none
+		.arrow 
+			right: 12px
+
+.cart2 
+	color: #000
+	border: 1px solid #000000
+	box-shadow: 4px 4px 2px rgba(0, 0, 0, 0.15)
+	transition: $transition
+	line-height: 16px
+	height: 100%
+	display: flex
+	flex-direction: column
+	&:hover
+		color: #000
+		box-shadow: none
+	.block
+		padding: 20px 10px 42px
+		position: relative
+		flex-grow: 1
+		.date
+			position: absolute
+			transition: $transition
+			right: 14px
+			bottom: 6px
+			font-size: 13px
+			font-weight: 300
+
+.block-news
+	padding: 20px 8px
+	border-top: 1px solid #000
+	a
+		display: inline-block
+		margin-bottom: 16px
+		&:hover 
+			opacity: .6
+	&:last-child
+		border-bottom: 1px solid #000
+
+.dropdown-1		
+	.dropdown-toggle 
+		&:after 
+			display: none
+	.dropdown-menu 
+		padding: 6px 10px
+		top: 0
+		left: -130px
+		right: 110px
+		border: 1px solid #000000
+		box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.15)
+		border-radius: 9px
+		font-size: 12px
+		min-width: 110px
+		a 
+			padding: 2px 0
+		@media (max-width: 991.98px)
+			position: static
+			float: none
+			background: transparent
+			border: 0
+			box-shadow: none
+	&.show
+		.dropdown-toggle 
+			font-weight: bold
+
+.dropdown-2
+	align-self: normal
+	display: flex
+	align-items: center
+	padding: 16px
+	border-top: 1px solid #000
+	transition: $transition
+	cursor: pointer
+	color: #000000
+	@media (min-width: 992px)
+		padding: 6px 26px
+		position: relative
+		border-top: 0
+		border-left: 1px solid #000
+	.dropdown-toggle 
+		&:after 
+			display: none
+	.dropdown-menu 
+		padding: 55px 33px
+		border-radius: 0
+		top: 98%
+		left: -192px
+		right: 0
+		border: 1px solid #000000
+		font-size: 14px
+		min-width: 325px
+		background: $color-warning
+		@media (max-width: 991.98px)
+			left: 0
+		.btn 
+			font-size: 14px
+			font-weight: 300
+			border: 1px solid #000
+			border-radius: 0
+			padding: 3px 6px
+			margin-top: 38px
+			transition: $transition
+			&:hover 
+				opacity: .6
+	&.show
+		background: #000
+		.dropdown-toggle 
+			font-weight: bold
+			color: #FFF
+
+.dropdown-3
+	position: static		
+	.dropdown-toggle 
+		&:after 
+			display: none
+	.dropdown-menu 
+		margin-top: 0
+		padding: 36px 0
+		border-radius: 0
+		top: 100%
+		left: 0
+		right: 0
+		border: 0
+		background: $color-warning
+		border: 1px solid #000000
+	&.show
+		.dropdown-toggle 
+			font-weight: bold
+	
+.breadcrumb 
+	padding: 0 
+	background: inherit
+	.breadcrumb-item
+		font-size: 36px
+		&.active
+			color: #000
+		a
+			color: #000
+		+ .breadcrumb-item
+			&:before 
+				color: #000
+				content: ">"
+
+.calendar
+	border: 1px solid #000000
+	box-shadow: 4px 4px 2px rgba(0, 0, 0, 0.15)
+	padding: 10px
+	background: $color-warning
+	font-family: 'Druk Wide', sans-serif
+	font-size: 24px
+	font-weight: bold
+	height: 100%
+	display: flex
+	flex-direction: column
+	text-align: center
+	justify-content: center
+
+.calendar2 
+	color: #000
+	padding: 17px 
+	border: 1px solid #000000
+	box-shadow: 4px 4px 2px rgba(0, 0, 0, 0.15)
+	transition: $transition
+	line-height: 142%
+	font-size: 12px
+	display: flex
+	flex-direction: column
+	.date 
+		font-weight: bold
+		text-align: center
+		font-size: 14px
+	&:hover
+		color: #000
+		box-shadow: none
+
+.col-xl-calendar
+	@media (min-width: 1200px)
+		flex: 0 0 20%
+		max-width: 20%
