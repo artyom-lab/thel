@@ -13,7 +13,7 @@ $(document).ready(function () {
   });
   headerSticky();
 
-  Waves.attach('.btn', ['waves-light']);
+  Waves.attach('.btn', ['waves-dark']);
   Waves.init();
 
   $('#collapse-1').on('click', function() {
