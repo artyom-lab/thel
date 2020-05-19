@@ -20,6 +20,10 @@ $(document).ready(function () {
     $('#collapse-1-1').toggleClass('active');
   });
 
+  $('#all').on('click', function() {
+    $('input[name="step"]').prop('checked', true);
+  });
+
   $(document).on('click.bs.dropdown.data-api', '.dropdown-menu', function (e) { 
     e.stopPropagation();
   });

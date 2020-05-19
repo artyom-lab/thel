@@ -9,31 +9,22 @@ $color-warning: #FEDD2F
 
 .black 
 	color: #000000 !important
-
 .violet
 	color: #BE00FF !important
-
 .red
 	color: #FF0000 !important
-
 .gray
 	color: #959595 !important
-
 .turquoise
-	color: #50E5EF !important
-		
+	color: #50E5EF !important	
 .blue
-	color: #0047FF !important
-		
+	color: #0047FF !important		
 .orange
 	color: #FFA800 !important
-
 .blue2
 	color: #151EEA !important
-
 .blue3
 	color: #1584EA !important
-
 .green
 	color: #15EA51 !important
 
@@ -117,6 +108,14 @@ a
 	@media (min-width: 1200px)
 		max-width: 1115px
 
+.container2 
+	padding-bottom: 125px
+	@media (min-width: 1400px)
+		max-width: 1050px
+		margin-left: 100px
+	@media (max-width: 575.98px)
+		padding-bottom: 60px
+
 .row-1
 	margin-left: -4px
 	margin-right: -4px
@@ -128,6 +127,8 @@ a
 	padding-top: 170px
 	@media (max-width: 991.98px)
 		padding-top: 100px
+.pt94
+	padding-top: 94px
 
 .w-300
 	@media (min-width: 1200px)
@@ -135,6 +136,8 @@ a
 
 .bb
 	border-bottom: 1px solid #000
+.bb2
+	border-bottom: 2px solid #000
 
 .border-shadow
 	border: 1px solid #000000
@@ -147,7 +150,6 @@ a
 	font-size: 48px
 	@media (max-width: 575.98px)
 		font-size: 34px
-
 .h2, h2 
 	font-size: 36px
 	font-family: 'Druk Wide', sans-serif
@@ -169,6 +171,10 @@ a
 	font-size: 36px
 .fz-64
 	font-size: 64px
+.fz-64a
+	font-size: 64px
+	@media (max-width: 575.98px)
+		font-size: 50px
 
 .fw500	
 	font-weight: 500
@@ -182,17 +188,25 @@ a
 	&:hover 
 		opacity: .6
 
+.lh09
+	line-height: 0.9
+.lh12
+	line-height: 1.2
+
 .bg-img
 	background-size: cover
 	background-position: center center
 	height: 205px
 	border-bottom: 1px solid #000000
-
 .bg-img2
 	height: 100%
 	@media (max-width: 767.98px)
 		height: 288px
-
+.bg-img3
+	background-size: cover
+	background-position: center center
+	height: 366px
+	border: 1px solid #000
 .bg-ads
 	background-size: cover
 	background-position: center center
@@ -337,7 +351,7 @@ a
 	transition: $transition
 	.form-control
 		display: inline-block
-		padding: 8px 0
+		padding: 12px 0
 		height: 15px
 		border: 0
 		border-bottom: 1px solid #000000
@@ -631,3 +645,71 @@ a
 	padding: 44px 44px 56px
 	@media (max-width: 575.98px)
 		padding: 44px 15px 56px
+
+.index-zone
+	background: $color-warning
+	.index-zone-1
+		color: #FFF
+		font-family: 'Druk Wide', sans-serif
+		padding: 161px 140px 40px
+		font-size: 36px
+		text-align: center
+		border-bottom: 1px solid #000
+		@media (max-width: 1399.98px)
+			padding: 130px 40px 40px
+		@media (max-width: 991.98px)
+			padding: 88px 15px 40px
+	.index-zone-2
+		padding: 20px 140px
+		border-bottom: 1px solid #000
+		@media (max-width: 1399.98px)
+			padding: 20px 40px 
+		@media (max-width: 991.98px)
+			padding: 20px 15px
+
+input[type="checkbox"]
+	display: none
+	~ .fa-check
+		padding: 3px 
+		color: transparent
+		cursor: pointer
+		margin-right: 8px
+		border: 1px solid #000
+		border-radius: 0
+	&:checked
+		~ .fa-check
+			transition: $transition
+			color: #000
+
+.section-2
+	padding: 50px 0
+	border-top: 2px solid #000
+
+.line
+	width: 80px
+	display: inline-block
+	border-top: 1px solid #000
+	margin-right: 16px
+	vertical-align: middle
+.cube
+	width: 22px
+	height: 22px
+	display: inline-block
+	border: 1px solid #000
+	vertical-align: middle
+	&:nth-child(2)
+		background: #FF1010
+	&:nth-child(3)
+		background: #2339FE
+	&:nth-child(4)
+		background: #FF28A9
+	&:hover 
+		opacity: .6
+
+.form-check-label
+	font-size: 0
+	margin-right: 24px
+	vertical-align: middle
+	@media (max-width: 767.98px)
+		margin-bottom: 4px
+
