@@ -137,6 +137,9 @@ a {
 
 .pt94 {
   padding-top: 94px; }
+  @media (max-width: 575.98px) {
+    .pt94 {
+      padding-top: 40px; } }
 
 @media (min-width: 1200px) {
   .w-300 {
@@ -677,7 +680,7 @@ a {
     font-size: 36px;
     text-align: center;
     border-bottom: 1px solid #000; }
-    @media (max-width: 1399.98px) {
+    @media (max-width: 1199.98px) {
       .index-zone .index-zone-1 {
         padding: 130px 40px 40px; } }
     @media (max-width: 991.98px) {
