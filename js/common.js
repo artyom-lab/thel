@@ -1,10 +1,10 @@
 $(document).ready(function () {
 
   function headerSticky() {
-    if ($(window).scrollTop() > 0) {
-      $('.navbar.fixed-top').addClass("sticky");
+    if ($(window).scrollTop() > 200) {
+      $('.navbar').addClass("sticky");
     } else {
-      $('.navbar.fixed-top').removeClass("sticky");
+      $('.navbar').removeClass("sticky");
     }
   };
 
